@@ -24,6 +24,18 @@ body {
     aspect-ratio: 1;
 }
 
+.unit-square {
+    width: 6.25%;
+    aspect-ratio: 1;
+    border: 1px solid black;
+    background: grey;
+    box-sizing: border-box;
+}
+
+.unit-square:hover {
+    background: black;
+}
+
 .border {
     border: 2px solid red;
 }

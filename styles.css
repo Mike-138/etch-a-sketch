@@ -38,7 +38,6 @@ input {
 }
 
 .unit-square {
-    width: calc(var(--grid-container-width) / 16);
     aspect-ratio: 1;
     border: 1px solid black;
     background: grey;

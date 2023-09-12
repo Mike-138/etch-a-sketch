@@ -1,12 +1,10 @@
 function increaseOpacity(event) {
     let child = event.target;
-    console.log(event.buttons);
-    if (event.buttons == 0 || child.style.opacity >= 1) {
+    if (event.buttons !== 1 || child.style.opacity >= 1) {
         child.removeEventListener("mouseover", increaseOpacity);
     } else {
         let unitOpacity = Number(child.style.opacity) + 0.1;
         child.style.opacity = unitOpacity;
-        console.log(child.style.opacity);
     }
 }
 
@@ -46,6 +44,8 @@ gridSizeInput.addEventListener("input", () => {
 
 sketchContainer.addEventListener("mousedown", (event) => {
     if (event.button == 0) {
+        let unitOpacity = Number(event.target.style.opacity) + 0.1;
+        event.target.style.opacity = unitOpacity;
         for (let i = 0; i < sketchContainer.children.length; i++) {
             let child = sketchContainer.children[i];
             child.addEventListener("mouseover", increaseOpacity);

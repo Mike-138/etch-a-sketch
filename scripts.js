@@ -1,12 +1,10 @@
 function generateEtch(grid) {
-    const unitWidth = String(400 / grid);
-    console.log(unitWidth);
+    const unitWidth = String(400 / grid) + "px";
     for (let i = 0; i < grid ** 2; i++) {
         let unitSquare = document.createElement("div");
         unitSquare.classList.add("unit-square");
-        unitSquare.style.width = unitWidth + "px";
+        unitSquare.style.width = unitWidth;
         sketchContainer.appendChild(unitSquare);
-        console.log(unitSquare.style)
     }
 }
 
@@ -16,6 +14,5 @@ const gridSizeInput = document.querySelector("input");
 gridSizeInput.addEventListener("input", () => {
     sketchContainer.innerHTML = "";
     let gridSize = gridSizeInput.valueAsNumber;
-    console.log(gridSize);
     generateEtch(gridSize);
 })

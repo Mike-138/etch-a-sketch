@@ -35,6 +35,7 @@ input {
     align-items: flex-start;
     width: var(--grid-container-width);
     aspect-ratio: 1;
+    box-sizing: content-box;
 }
 
 .unit-square {

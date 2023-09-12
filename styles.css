@@ -11,9 +11,18 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: inherit;
+    gap: 48px;
+}
+
+input {
+    text-align: center;
+    font-size: 48px;
+    height: 48px;
+    width: 128px;
 }
 
 .sketch-container {

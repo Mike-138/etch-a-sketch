@@ -40,15 +40,8 @@ input {
 
 .unit-square {
     aspect-ratio: 1;
-    border: 1px solid black;
-    background: grey;
-    box-sizing: border-box;
-}
-
-.unit-square:hover {
-    background: black;
 }
 
 .border {
-    border: 2px solid red;
+    border: 2px solid gold;
 }

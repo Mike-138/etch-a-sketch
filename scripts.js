@@ -35,10 +35,13 @@ function generateSketch(container, grid) {
 
 const sketchContainer = document.querySelector(".sketch-container");
 const gridSizeInput = document.querySelector("input");
+let gridSize = gridSizeInput.valueAsNumber;
+
+generateSketch(sketchContainer, gridSize);
 
 gridSizeInput.addEventListener("input", () => {
     sketchContainer.innerHTML = "";
-    let gridSize = gridSizeInput.valueAsNumber;
+    gridSize = gridSizeInput.valueAsNumber;
     generateSketch(sketchContainer, gridSize);
 });
 
